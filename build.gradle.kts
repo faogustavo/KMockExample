@@ -4,19 +4,16 @@ buildscript {
         google()
         mavenCentral()
         maven {
-            url = java.net.URI("https://maven.pkg.github.com/bitPogo/kmock")
-            credentials {
-                username = project.findProperty("gpr.user")?.toString()
-                    ?: System.getenv("GITHUB_USER")
-                password = project.findProperty("gpr.key")?.toString()
-                    ?: System.getenv("GITHUB_TOKEN")
+            url = java.net.URI("https://raw.github.com/bitPogo/maven-snapshots/main/snapshots")
+            content {
+                includeGroup("tech.antibytes.kmock")
             }
         }
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
         classpath("com.android.tools.build:gradle:7.1.3")
-        classpath("tech.antibytes.kmock:kmock-gradle:0.1.1")
+        classpath("tech.antibytes.kmock:kmock-gradle:0.1.1-SNAPSHOT")
     }
 }
 
@@ -29,12 +26,9 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url = java.net.URI("https://maven.pkg.github.com/bitPogo/kmock")
-            credentials {
-                username = project.findProperty("gpr.user")?.toString()
-                    ?: System.getenv("GITHUB_USER")
-                password = project.findProperty("gpr.key")?.toString()
-                    ?: System.getenv("GITHUB_TOKEN")
+            url = java.net.URI("https://raw.github.com/bitPogo/maven-snapshots/main/snapshots")
+            content {
+                includeGroup("tech.antibytes.kmock")
             }
         }
     }

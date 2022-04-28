@@ -18,7 +18,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("tech.antibytes.kmock:kmock:0.1.1")
+                implementation("tech.antibytes.kmock:kmock:0.1.1-SNAPSHOT")
             }
         }
 
